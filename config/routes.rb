@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :friends
   # get 'home/index' => This was the original route at http://localhost:3000/home/index
   root 'home#index' # Setting Root Route
   get 'home/about'
