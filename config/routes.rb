@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :friends
+  resources :friends # Came from rails scaffold. Handles CRUD routes all from 'resources'
   # get 'home/index' => This was the original route at http://localhost:3000/home/index
   root 'home#index' # Setting Root Route
   get 'home/about'
