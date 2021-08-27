@@ -1,5 +1,6 @@
 class FriendsController < ApplicationController
   before_action :set_friend, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!, except: [:index, :show] # If user is not authenticated, don't let them do anything but show page and index page
 
   # GET /friends or /friends.json
   def index
