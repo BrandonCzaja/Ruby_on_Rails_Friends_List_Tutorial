@@ -63,7 +63,8 @@ class FriendsController < ApplicationController
     end
 
     # Only allow a list of trusted parameters through.
+    # Had to add :user_id because that db field was added after this page was created
     def friend_params
-      params.require(:friend).permit(:first_name, :last_name, :email, :phone, :twitter)
+      params.require(:friend).permit(:first_name, :last_name, :email, :phone, :twitter, :user_id)
     end
 end
